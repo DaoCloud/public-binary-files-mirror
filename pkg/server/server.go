@@ -27,7 +27,12 @@ func setupRouter() *gin.Engine {
 		x := m
 		r.GET("/"+x.source+"/*path", func(c *gin.Context) {
 			path := c.Param("path")
-			c.Redirect(http.StatusTemporaryRedirect, x.url+path)
+			c.Redirect(http.StatusFound, x.url+path)
+		})
+
+		r.HEAD("/"+x.source+"/*path", func(c *gin.Context) {
+			path := c.Param("path")
+			c.Redirect(http.StatusFound, x.url+path)
 		})
 	}
 
