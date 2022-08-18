@@ -4,7 +4,6 @@
 FROM golang:1.18.5 as builder
 # FROM docker.m.daocloud.io/golang:1.18 as builder
 
-ENV VERSION 0.1.0
 ENV CGO_ENABLED 0
 ENV BUILD_DIR /build
 
