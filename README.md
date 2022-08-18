@@ -14,8 +14,17 @@
 
 在原始 URL 上面加入 `files.m.daocloud.io` 的 *前缀* 就可以使用。比如：
 
-https://github.com/etcd-io/etcd/releases/download/v3.4.20/etcd-v3.4.20-linux-amd64.tar.gz =>
-https://files.m.daocloud.io/github.com/etcd-io/etcd/releases/download/v3.4.20/etcd-v3.4.20-linux-amd64.tar.gz
+```
+# Helm 下载原始URL
+wget https://get.helm.sh/helm-v3.9.1-linux-amd64.tar.gz
+
+# 加速后的 URL
+wget https://files.m.daocloud.io/get.helm.sh/helm-v3.9.1-linux-amd64.tar.gz
+```
+
+
+
+即可加速下载
 
 ## 支持的域名
 
