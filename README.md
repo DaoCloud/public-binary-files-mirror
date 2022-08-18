@@ -146,8 +146,9 @@ tar -zxvf istio-${ISTIO_VERSION}-linux-amd64.tar.gz
 所有如果您碰巧是所有下载中的第一次，没有缓存，需要从国外拉取，就会比较慢。第二次就会非常快。
 
 
-## 推荐：加速三剑客
+## [友情链接]加速三剑客
 
-* 镜像加速：https://github.com/DaoCloud/public-image-mirro
+* 镜像加速：https://github.com/DaoCloud/public-image-mirror
 * 二进制文件加速：https://github.com/DaoCloud/public-binary-files-mirror
 * Helm 加速：https://github.com/DaoCloud/public-helm-charts-mirror
+
