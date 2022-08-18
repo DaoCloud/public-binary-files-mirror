@@ -1,0 +1,25 @@
+---
+helm:
+  url-pattern: https://get.helm.sh/helm-{{ version }}-{{ os }}-{{ arch }}.tar.gz
+  version-pattern: https://api.github.com/repos/helm/helm/releases
+  arch:
+   - amd64
+   - arm64
+  os:
+   - linux
+kubeadm:
+  url-pattern: https://storage.googleapis.com/kubernetes-release/release/{{ version }}/bin/{{ os }}/{{ arch }}/kubeadm
+  version-pattern: https://api.github.com/repos/kubernetes/kubernetes/releases
+  arch:
+   - amd64
+   - arm64
+  os:
+   - linux
+containerd:
+  url-pattern: https://github.com/containerd/containerd/releases/download/{{ version }}/containerd-{{ version (remove v) }}-linux-{{ arch }}.tar.gz
+  version-pattern: https://api.github.com/repos/containerd/containerd/releases
+  arch:
+   - amd64
+   - arm64
+  os:
+   - linux
