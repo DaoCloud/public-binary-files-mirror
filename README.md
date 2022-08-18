@@ -38,7 +38,7 @@ wget https://files.m.daocloud.io/get.helm.sh/helm-v3.9.1-linux-amd64.tar.gz
 
 ```
 cd /tmp
-export HELM_VERSION="v3.9.1"
+export HELM_VERSION="v3.9.3"
 
 wget "https://files.m.daocloud.io/get.helm.sh/helm-${HELM_VERSION}-linux-amd64.tar.gz"
 tar -zxvf helm-${HELM_VERSION}-linux-amd64.tar.gz
@@ -117,7 +117,7 @@ kind version
 
 ```
 cd /tmp
-export K9S_VERSION="v0.26.1"
+export K9S_VERSION="v0.26.3"
 
 wget https://files.m.daocloud.io/github.com/derailed/k9s/releases/download/${K9S_VERSION}/k9s_Linux_x86_64.tar.gz
 tar -zxvf k9s_Linux_x86_64.tar.gz
@@ -130,7 +130,7 @@ k9s version
 
 ```
 cd /tmp
-export ISTIO_VERSION="1.13.5"
+export ISTIO_VERSION="1.14.3"
 
 wget "https://files.m.daocloud.io/github.com/istio/istio/releases/download/${ISTIO_VERSION}/istio-${ISTIO_VERSION}-linux-amd64.tar.gz"
 tar -zxvf istio-${ISTIO_VERSION}-linux-amd64.tar.gz
