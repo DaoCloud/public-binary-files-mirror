@@ -98,6 +98,7 @@ containerd_download_url: "{{ files_repo }}/github.com/containerd/containerd/rele
 nerdctl_download_url: "{{ files_repo }}/github.com/containerd/nerdctl/releases/download/v{{ nerdctl_version }}/nerdctl-{{ nerdctl_version }}-{{ ansible_system | lower }}-{{ image_arch }}.tar.gz"
 ```
 
+实测下载速度可以达到`Downloaded: 19 files, 603M in 23s (25.9 MB/s)`, 下载全部文件可以在 23s 内完成！
 完整方法可以参考 https://gist.github.com/yankay/a863cf2e300bff6f9040ab1c6c58fbae
 
 ## 使用场景3 - 安装 KIND
