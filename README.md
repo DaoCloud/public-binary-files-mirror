@@ -10,12 +10,6 @@
 * 稳定可靠，更新实时。
 * 可以直接用于 kubespray
 
-## 快速开始
-
-```
-用浏览器打开 https://files.m.daocloud.io/ 来浏览这些文件。点击下载。（当然也可以用 curl 下载）
-```
-
 ## 使用方法
 
 在原始 URL 上面加入 `files.m.daocloud.io` 的 *前缀* 就可以使用。比如：
@@ -23,17 +17,25 @@
 https://github.com/etcd-io/etcd/releases/download/v3.4.20/etcd-v3.4.20-linux-amd64.tar.gz =>
 https://files.m.daocloud.io/github.com/etcd-io/etcd/releases/download/v3.4.20/etcd-v3.4.20-linux-amd64.tar.gz
 
-## 支持的文件
+## 支持的域名
 
 [mirror.txt](mirror.txt)
 
-如果想要新增, 提 PR 修改即可。例如 TODO
+如果想要新增, 提 PR 修改。
 
 ## 最佳实践
 
 ## 使用场景1 - 安装 Helm
 
-TODO
+```
+cd /tmp
+export HELM_VERSION="v3.9.1"
+
+wget "https://files.m.daocloud.io/get.helm.sh/helm-${HELM_VERSION}-linux-amd64.tar.gz"
+tar -zxvf helm-${HELM_VERSION}-linux-amd64.tar.gz
+mv linux-amd64/helm /usr/local/bin/helm
+helm version
+```
 
 ## 使用场景2 - 安装 KubeSpray
 
@@ -41,15 +43,25 @@ TODO
 
 ## 使用场景3 - 安装 KIND
 
-TODO
+```
+cd /tmp
+export KIND_VERSION="v0.14.0"
+
+curl -Lo ./kind https://files.m.daocloud.io/github.com/kubernetes-sigs/kind/releases/download/${KIND_VERSION}/kind-linux-amd64
+chmod +x ./kind
+mv ./kind /usr/bin/kind
+kind version
+```
 
 ## 使用场景4 - 安装 K9S
 
 TODO
-
 
 ## 使用场景5
 
 欢迎贡献更多的场景
 
 
+## 原理架构
+
+[docs/architecture.md]
