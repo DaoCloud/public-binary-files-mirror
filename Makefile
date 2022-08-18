@@ -43,7 +43,7 @@ all: build
 build: $(BINDIR)/$(BINNAME)
 
 $(BINDIR)/$(BINNAME): $(SRC)
-	GO111MODULE=on go build $(GOFLAGS) -trimpath -tags '$(TAG)' -ldflags '$(LDFLAGS)' -o '$(BINDIR)'/$(BINNAME) .
+	GO111MODULE=on CGO_ENABLED=0 go build $(GOFLAGS) -trimpath -tags '$(TAG)' -ldflags '$(LDFLAGS)' -o '$(BINDIR)'/$(BINNAME) .
 
 # ------------------------------------------------------------------------------
 #  test

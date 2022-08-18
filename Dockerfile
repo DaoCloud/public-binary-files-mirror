@@ -23,10 +23,15 @@ RUN make build
 # ################################################################################
 # ## DEPLOYMENT CONTAINER
 # ################################################################################
-# FROM alpine
+FROM alpine
 
 EXPOSE 8080
-# COPY --from=builder /build/bin/public-binary-file-mirror /
 
-ENTRYPOINT ["/build/bin/public-binary-file-mirror"]
+WORKDIR /app
+RUN mkdir -p /app
+
+COPY --from=builder /build/bin/public-binary-file-mirror /app/
+COPY --from=builder /build/mirror.yaml /app/
+
+ENTRYPOINT ["/app/public-binary-file-mirror"]
 CMD ["serve"]
