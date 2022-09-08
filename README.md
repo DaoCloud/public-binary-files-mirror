@@ -142,7 +142,7 @@ tar -zxvf istio-${ISTIO_VERSION}-linux-amd64.tar.gz
 ```
 export NERDCTL_VERSION="0.22.2"
 mkdir -p nerdctl ;cd nerdctl
-wget https://dn-dao-github-mirror.daocloud.io/containerd/nerdctl/releases/download/v${NERDCTL_VERSION}/nerdctl-full-${NERDCTL_VERSION}-linux-amd64.tar.gz
+wget https://files.m.daocloud.io/github.com/containerd/nerdctl/releases/download/v${NERDCTL_VERSION}/nerdctl-full-${NERDCTL_VERSION}-linux-amd64.tar.gz
 tar -zvxf nerdctl-full-${NERDCTL_VERSION}-linux-amd64.tar.gz
 mkdir -p /opt/cni/bin ;cp -f libexec/cni/* /opt/cni/bin/ ;cp bin/* /usr/local/bin/ ;cp lib/systemd/system/*.service /usr/lib/systemd/system/
 systemctl enable containerd ;systemctl start containerd --now
