@@ -1,7 +1,7 @@
 ################################################################################
 ## GO BUILDER
 ################################################################################
-FROM golang:1.18.5 as builder
+FROM golang:1.19.5 as builder
 # FROM docker.m.daocloud.io/golang:1.18 as builder
 
 ENV CGO_ENABLED 0
