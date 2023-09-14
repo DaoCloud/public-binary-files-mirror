@@ -54,9 +54,9 @@ helm version
 files_repo: "https://files.m.daocloud.io"
 
 ## Kubernetes components
-kubeadm_download_url: "{{ files_repo }}/dl.k8s.io/kubernetes-release/release/{{ kubeadm_version }}/bin/linux/{{ image_arch }}/kubeadm"
-kubectl_download_url: "{{ files_repo }}/dl.k8s.io/kubernetes-release/release/{{ kube_version }}/bin/linux/{{ image_arch }}/kubectl"
-kubelet_download_url: "{{ files_repo }}/dl.k8s.io/kubernetes-release/release/{{ kube_version }}/bin/linux/{{ image_arch }}/kubelet"
+kubeadm_download_url: "{{ files_repo }}/dl.k8s.io/release/{{ kubeadm_version }}/bin/linux/{{ image_arch }}/kubeadm"
+kubectl_download_url: "{{ files_repo }}/dl.k8s.io/release/{{ kube_version }}/bin/linux/{{ image_arch }}/kubectl"
+kubelet_download_url: "{{ files_repo }}/dl.k8s.io/release/{{ kube_version }}/bin/linux/{{ image_arch }}/kubelet"
 
 ## CNI Plugins
 cni_download_url: "{{ files_repo }}/github.com/containernetworking/plugins/releases/download/{{ cni_version }}/cni-plugins-linux-{{ image_arch }}-{{ cni_version }}.tgz"
@@ -88,14 +88,11 @@ kata_containers_download_url: "{{ files_repo }}/github.com/kata-containers/kata-
 # [Optional] cri-dockerd: only if you set container_manager: docker
 cri_dockerd_download_url: "{{ files_repo }}/github.com/Mirantis/cri-dockerd/releases/download/v{{ cri_dockerd_version }}/cri-dockerd-{{ cri_dockerd_version }}.{{ image_arch }}.tgz"
 
-# [Optional] cri-o: only if you set container_manager: crio
-crio_download_base: "download.opensuse.org/repositories/devel:kubic:libcontainers:stable"
-crio_download_crio: "http://{{ crio_download_base }}:/cri-o:/"
-
 # [Optional] runc,containerd: only if you set container_runtime: containerd
 runc_download_url: "{{ files_repo }}/github.com/opencontainers/runc/releases/download/{{ runc_version }}/runc.{{ image_arch }}"
 containerd_download_url: "{{ files_repo }}/github.com/containerd/containerd/releases/download/v{{ containerd_version }}/containerd-{{ containerd_version }}-linux-{{ image_arch }}.tar.gz"
 nerdctl_download_url: "{{ files_repo }}/github.com/containerd/nerdctl/releases/download/v{{ nerdctl_version }}/nerdctl-{{ nerdctl_version }}-{{ ansible_system | lower }}-{{ image_arch }}.tar.gz"
+
 ```
 
 实测下载速度可以达到`Downloaded: 19 files, 603M in 23s (25.9 MB/s)`, 下载全部文件可以在 23s 内完成！
