@@ -14,7 +14,7 @@
 
 在原始 URL 上面加入 `files.m.daocloud.io` 的 *前缀* 就可以使用。比如：
 
-```
+```bash
 # Helm 下载原始URL
 wget https://get.helm.sh/helm-v3.9.1-linux-amd64.tar.gz
 
@@ -22,21 +22,13 @@ wget https://get.helm.sh/helm-v3.9.1-linux-amd64.tar.gz
 wget https://files.m.daocloud.io/get.helm.sh/helm-v3.9.1-linux-amd64.tar.gz
 ```
 
-
-
-即可加速下载
-
-## 支持的域名
-
-[mirror.yaml](mirror.yaml)
-
-如果想要新增, 提 PR 修改。
+即可加速下载, 所以如果指定的文件没有被缓存, 会卡住等待缓存完成, 后续下载就无带宽限制。
 
 ## 最佳实践
 
 ## 使用场景1 - 安装 Helm
 
-```
+```bash
 cd /tmp
 export HELM_VERSION="v3.9.3"
 
@@ -49,8 +41,8 @@ helm version
 ## 使用场景2 - 安装 KubeSpray
 
 加入如下配置即可：
-```
 
+```yaml
 files_repo: "https://files.m.daocloud.io"
 
 ## Kubernetes components
@@ -100,7 +92,7 @@ nerdctl_download_url: "{{ files_repo }}/github.com/containerd/nerdctl/releases/d
 
 ## 使用场景3 - 安装 KIND
 
-```
+```bash
 cd /tmp
 export KIND_VERSION="v0.14.0"
 
@@ -112,7 +104,7 @@ kind version
 
 ## 使用场景4 - 安装 K9S
 
-```
+```bash
 cd /tmp
 export K9S_VERSION="v0.26.3"
 
@@ -125,7 +117,7 @@ k9s version
 
 ## 使用场景5 - 安装 istio
 
-```
+```bash
 cd /tmp
 export ISTIO_VERSION="1.14.3"
 
@@ -136,7 +128,7 @@ tar -zxvf istio-${ISTIO_VERSION}-linux-amd64.tar.gz
 
 ## 使用场景6 - 安装 nerdctl （代替 docker 工具）
 这里是root安装，其他安装方式请参考源站: https://github.com/containerd/nerdctl
-```
+```bash
 export NERDCTL_VERSION="0.22.2"
 mkdir -p nerdctl ;cd nerdctl
 wget https://files.m.daocloud.io/github.com/containerd/nerdctl/releases/download/v${NERDCTL_VERSION}/nerdctl-full-${NERDCTL_VERSION}-linux-amd64.tar.gz
@@ -147,13 +139,6 @@ systemctl enable buildkit;systemctl start buildkit --now
 ```
 
 欢迎贡献更多的场景
-
-
-## 友情提示
-
-本软件，使用的是 CDN 回源机制来同步文件。
-所以如果您碰巧是下载某个资源所有人中的第一位，没有缓存，需要从国外拉取，就会比较慢。第二次就会非常快。
-
 
 ## [友情链接]加速三剑客
 
