@@ -94,7 +94,7 @@ nerdctl_download_url: "{{ files_repo }}/github.com/containerd/nerdctl/releases/d
 
 ```bash
 cd /tmp
-export KIND_VERSION="v0.14.0"
+export KIND_VERSION="v0.22.0"
 
 curl -Lo ./kind https://files.m.daocloud.io/github.com/kubernetes-sigs/kind/releases/download/${KIND_VERSION}/kind-linux-amd64
 chmod +x ./kind
@@ -106,7 +106,7 @@ kind version
 
 ```bash
 cd /tmp
-export K9S_VERSION="v0.26.3"
+export K9S_VERSION="v0.32.4"
 
 wget https://files.m.daocloud.io/github.com/derailed/k9s/releases/download/${K9S_VERSION}/k9s_Linux_x86_64.tar.gz
 tar -zxvf k9s_Linux_x86_64.tar.gz
@@ -129,7 +129,7 @@ tar -zxvf istio-${ISTIO_VERSION}-linux-amd64.tar.gz
 ## 使用场景6 - 安装 nerdctl （代替 docker 工具）
 这里是root安装，其他安装方式请参考源站: https://github.com/containerd/nerdctl
 ```bash
-export NERDCTL_VERSION="0.22.2"
+export NERDCTL_VERSION="v1.7.6"
 mkdir -p nerdctl ;cd nerdctl
 wget https://files.m.daocloud.io/github.com/containerd/nerdctl/releases/download/v${NERDCTL_VERSION}/nerdctl-full-${NERDCTL_VERSION}-linux-amd64.tar.gz
 tar -zvxf nerdctl-full-${NERDCTL_VERSION}-linux-amd64.tar.gz
