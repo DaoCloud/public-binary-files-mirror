@@ -140,6 +140,28 @@ systemctl enable buildkit;systemctl start buildkit --now
 
 欢迎贡献更多的场景
 
+## 禁止加速的后缀
+
+以下后缀的文件会直接响应 403
+
+- .bmp
+- .jpg
+- .jpeg
+- .png
+- .gif
+- .webp
+- .tiff
+- .mp4
+- .webm
+- .ogg
+- .avi
+- .mov
+- .flv
+- .mkv
+- .mp3
+- .wav
+- .rar
+
 ## [友情链接]加速三剑客
 
 * 镜像加速：https://github.com/DaoCloud/public-image-mirror
