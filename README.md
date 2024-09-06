@@ -129,7 +129,7 @@ tar -zxvf istio-${ISTIO_VERSION}-linux-amd64.tar.gz
 ## 使用场景6 - 安装 nerdctl （代替 docker 工具）
 这里是root安装，其他安装方式请参考源站: https://github.com/containerd/nerdctl
 ```bash
-export NERDCTL_VERSION="v1.7.6"
+export NERDCTL_VERSION="1.7.6"
 mkdir -p nerdctl ;cd nerdctl
 wget https://files.m.daocloud.io/github.com/containerd/nerdctl/releases/download/v${NERDCTL_VERSION}/nerdctl-full-${NERDCTL_VERSION}-linux-amd64.tar.gz
 tar -zvxf nerdctl-full-${NERDCTL_VERSION}-linux-amd64.tar.gz
