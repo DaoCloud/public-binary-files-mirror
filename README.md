@@ -10,6 +10,8 @@
 * 稳定可靠，更新实时。
 * 可以直接用于 kubespray
 
+[后端源码](https://github.com/wzshiming/httpmirror)
+
 ## 使用方法
 
 在原始 URL 上面加入 `files.m.daocloud.io` 的 *前缀* 就可以使用。比如：
