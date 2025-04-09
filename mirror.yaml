@@ -1,7 +1,0 @@
---- 
-mirrors: 
-  github.com: "https://dn-dao-github-mirror.daocloud.io"
-  storage.googleapis.com: "https://dn-dao-googleapis-mirror.daocloud.io"
-  dl.k8s.io: "https://dn-dao-dl-k8s-mirror.daocloud.io"
-  get.helm.sh: "https://dn-dao-helm-mirror.daocloud.io"
-  dl.min.io: "https://dn-dao-mc-mirror.daocloud.io"
