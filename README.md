@@ -28,6 +28,46 @@ wget https://files.m.daocloud.io/get.helm.sh/helm-v3.9.1-linux-amd64.tar.gz
 
 ## 最佳实践
 
+## 作为系统源
+
+先安装和更新 CA 证书, 要不然可能会报证书验证失败.
+
+### Debian 11/Ubuntu 24 以及之前
+
+``` bash
+# apt-get update -y && apt-get install -y ca-certificates && update-ca-certificates
+sed -i 's|http://|https://files.m.daocloud.io/|g' /etc/apt/sources.list
+```
+
+### Debian 12/Ubuntu 25 以及之后
+
+``` bash
+# apt-get update -y && apt-get install -y ca-certificates && update-ca-certificates
+sed -i 's|http://|https://files.m.daocloud.io/|g' /etc/apt/sources.list.d/*.sources
+```
+
+### Rocky Linux
+
+``` bash
+# yum install -y ca-certificates && update-ca-trust
+sed -i 's|#baseurl=http://|baseurl=https://files.m.daocloud.io/|g' /etc/yum.repos.d/*.repo
+sed -i 's|mirrorlist=|#mirrorlist=|g' /etc/yum.repos.d/*.repo
+yum makecache
+```
+
+### Alpine
+
+``` bash
+# apk add ca-certificates && update-ca-certificates
+sed -i 's|https://dl-cdn.alpinelinux.org/|https://files.m.daocloud.io/dl-cdn.alpinelinux.org/|g' /etc/apk/repositories
+```
+
+## Pip 源
+
+``` bash
+PIP_INDEX_URL=https://files.m.daocloud.io/pypi.org/simple/  
+```
+
 ## 使用场景1 - 安装 Helm
 
 ```bash
