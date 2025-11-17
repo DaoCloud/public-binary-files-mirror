@@ -62,12 +62,6 @@ yum makecache
 sed -i 's|https://dl-cdn.alpinelinux.org/|https://files.m.daocloud.io/dl-cdn.alpinelinux.org/|g' /etc/apk/repositories
 ```
 
-## Pip 源
-
-``` bash
-PIP_INDEX_URL=https://files.m.daocloud.io/pypi.org/simple/  
-```
-
 ## 使用场景1 - 安装 Helm
 
 ```bash
