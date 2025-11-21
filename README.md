@@ -9,8 +9,8 @@
 * 易于添加，添加新的包，不需要去修改代码。
 * 稳定可靠，更新实时。
 * 可以直接用于 kubespray
-
-[后端源码](https://github.com/wzshiming/httpmirror)
+* [本服务后端代码](https://github.com/OpenCIDN/httpmirror)
+* [同步队列](https://queue.m.daocloud.io/status/)
 
 ## 使用方法
 
