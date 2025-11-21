@@ -11,6 +11,9 @@
 * 可以直接用于 kubespray
 * [本服务后端代码](https://github.com/OpenCIDN/httpmirror)
 * [同步队列](https://queue.m.daocloud.io/status/)
+* 此项目仅是源地址 的 Mirror
+  * 所有 hash 均和源保持一致 (懒加载机制)。
+  * 缓存的内容只保留 90 天, 过期后会需要重新同步。
 
 ## 使用方法
 
