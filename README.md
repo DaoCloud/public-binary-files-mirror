@@ -1,7 +1,7 @@
 # public-binary-files-mirror
 
 * [本服务后端代码](https://github.com/OpenCIDN/httpmirror)
-* [同步队列](https://queue.m.daocloud.io/status/)
+* [同步队列](https://queue.m.daocloud.io/status/) 仅保留一小时的同步记录
 
 ## 背景 & 目标
 
